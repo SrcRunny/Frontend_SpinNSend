@@ -1,0 +1,70 @@
+{
+  "stations": [
+    {
+      "id": 1,
+      "title": "Otteri Wash & Dry",
+      "description": "Thailand number 1 laundry convenience store with the most branches and the most user members who have proven that the standards of convenience and cleanliness of the laundry system are satisfactory. Complete modern washing technology International standard industrial washing machine and dryer Open 24 hours a day",
+      "location": "wait for api",
+      "small_washing": {
+        "cold_water": 30,
+        "warm_water": 40,
+        "hot_water": 50
+      },
+      "medium_washing": {
+        "cold_water": 30,
+        "warm_water": 40,
+        "hot_water": 50
+      },
+      "large_washing": {
+        "cold_water": 30,
+        "warm_water": 40,
+        "hot_water": 50
+      },
+      "dry_machine": 40
+    },
+    {
+      "id": 2,
+      "title": "Neko Wash & Dry",
+      "description": "Thailand number 1 laundry convenience store with the most branches and the most user members who have proven that the standards of convenience and cleanliness of the laundry system are satisfactory. Complete modern washing technology International standard industrial washing machine and dryer Open 24 hours a day",
+      "location": "wait for api",
+      "small_washing": {
+        "cold_water": 30,
+        "warm_water": 40,
+        "hot_water": 50
+      },
+      "medium_washing": {
+        "cold_water": 30,
+        "warm_water": 40,
+        "hot_water": 50
+      },
+      "large_washing": {
+        "cold_water": 30,
+        "warm_water": 40,
+        "hot_water": 50
+      },
+      "dry_machine": 40
+    },
+    {
+      "id": 1,
+      "title": "Sky & Wash",
+      "description": "Thailand number 1 laundry convenience store with the most branches and the most user members who have proven that the standards of convenience and cleanliness of the laundry system are satisfactory. Complete modern washing technology International standard industrial washing machine and dryer Open 24 hours a day",
+      "location": "wait for api",
+      "small_washing": {
+        "cold_water": 30,
+        "warm_water": 40,
+        "hot_water": 50
+      },
+      "medium_washing": {
+        "cold_water": 30,
+        "warm_water": 40,
+        "hot_water": 50
+      },
+      "large_washing": {
+        "cold_water": 30,
+        "warm_water": 40,
+        "hot_water": 50
+      },
+      "dry_machine": 40
+    }
+  ]
+}
