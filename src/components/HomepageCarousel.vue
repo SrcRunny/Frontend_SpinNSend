@@ -2,11 +2,11 @@
 export default {
   data() {
     return {
-      activeIndex: 0, // Initial active index
+      activeIndex: 0, 
       items: [
         {
-          imageSrc: 'https://cms.otteriwashdry.com/assets/6ddb269f-675e-4a67-89e1-e9a168e6b479',
-          title: 'Slider 01',
+          imageSrc: 'https://cornerstonehomeinspectors.com/wp-content/uploads/2022/09/washing-machine-brands-to-avoid-scaled.jpg',
+          title: 'Spin N Send',
           description: 'Your description for Slider 01'
         },
         {
@@ -15,17 +15,17 @@ export default {
           description: 'Your description for Slider 01'
         },
         {
-          imageSrc: 'https://cms.otteriwashdry.com/assets/6ddb269f-675e-4a67-89e1-e9a168e6b479',
+          imageSrc: 'https://aws-obg-image-lb-3.tcl.com/content/dam/brandsite/region/in/blog/pc/detail/blog-april/best-fully-automatic-washing-machines/pc.jpg',
           title: 'Slider 03',
           description: 'Your description for Slider 01'
         },
         {
-          imageSrc: 'https://cms.otteriwashdry.com/assets/6ddb269f-675e-4a67-89e1-e9a168e6b479',
+          imageSrc: 'https://www.cincinnati.com/gcdn/-mm-/b7f5ed5d8a6f8cb865868eecfa4798757ab6fe03/c=0-0-2000-1125/local/-/media/2018/07/03/USATODAY/usatsports/Reviewed.com-RvEW-21880-GettyImages-136628195.jpg',
           title: 'Slider 04',
           description: 'Your description for Slider 01'
         },
         {
-          imageSrc: 'https://cms.otteriwashdry.com/assets/6ddb269f-675e-4a67-89e1-e9a168e6b479',
+          imageSrc: 'https://content.abt.com/image.php/ba489d2301eadc993072a86d4919fd19?image=/media/learn/hero-images/washing-machine-buying-guide-hero.jpg',
           title: 'Slider 05',
           description: 'Your description for Slider 01'
         }
@@ -33,7 +33,6 @@ export default {
     };
   },
   mounted() {
-    // Start auto-run on component mount
     this.startAutoRun();
   },
   methods: {
@@ -50,17 +49,15 @@ export default {
       // Set an interval to switch to the next slider every 5 seconds (adjust as needed)
       this.intervalId = setInterval(() => {
         this.nextSlider();
-      }, 5000); // 5000 milliseconds = 5 seconds
+      }, 6000);
     },
     stopAutoRun() {
-      // Clear the interval to stop auto-run
       if (this.intervalId !== null) {
         clearInterval(this.intervalId);
       }
     }
   },
   beforeUnmount() {
-    // Clear the interval when the component is about to be unmounted to prevent memory leaks
     this.stopAutoRun();
   }
 };
@@ -76,7 +73,7 @@ export default {
       >
         <img :src="item.imageSrc" alt="" />
         <div class="content">
-          <p>design</p>
+          <p>We are</p>
           <h2>{{ item.title }}</h2>
           <p>{{ item.description }}</p>
         </div>
@@ -145,12 +142,15 @@ export default {
 
 .slider .list .item .content p:nth-child(1) {
   text-transform: uppercase;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
 }
 
 .slider .list .item .content h2 {
-  font-size: 100px;
+  font-size: 90px;
+  font-weight: 600;
   margin: 0;
+  white-space: nowrap; /* Prevent title from wrapping */
+  overflow: hidden;    /* Hide overflow content */
 }
 .slider .list .item.active {
   opacity: 1;
@@ -234,7 +234,7 @@ export default {
 
 }
 .thumbnail .item:hover{
-  border: white 5px solid;
+  border: rgb(255, 255, 255) 3px solid;
   border-radius: 10px;
 }
 .thumbnail .item img{

@@ -5,8 +5,8 @@ import HomePage from './views/HomePage.vue'
 <template>
   <section id="Navbar" class="fixed top-0 w-full z-50">
     <div class="navbar bg-base-100 " :style="{ backgroundColor: 'rgba(255, 255, 255, 0)' }">
-      <div class="navbar-start">
-        <a class="btn btn-ghost text-2xl">daisyUI</a>
+      <div class="navbar-start text-neutral-content">
+        <a class="btn btn-ghost text-2xl">SpinNSend</a>
       </div>
       <div class="navbar-end">
         <div class="dropdown">
@@ -47,5 +47,4 @@ import HomePage from './views/HomePage.vue'
   <RouterView></RouterView>
 </template>
 
-<style>
-</style>
+
