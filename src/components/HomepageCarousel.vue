@@ -29,10 +29,13 @@ export default {
           title: 'Slider 05',
           description: 'Your description for Slider 01'
         }
-      ] as { imageSrc: string; title: string; description: string }[]
-    }
+      ] as { imageSrc: string; title: string; description: string }[],intervalId: null as number | null
+    };
   },
-  
+  mounted() {
+    // Start auto-run on component mount
+    this.startAutoRun();
+  },
   methods: {
     setActive(index: number) {
       this.activeIndex = index;
@@ -43,7 +46,23 @@ export default {
     prevSlider() {
       this.activeIndex = (this.activeIndex - 1 + this.items.length) % this.items.length;
     },
+    startAutoRun() {
+      // Set an interval to switch to the next slider every 5 seconds (adjust as needed)
+      this.intervalId = setInterval(() => {
+        this.nextSlider();
+      }, 5000); // 5000 milliseconds = 5 seconds
+    },
+    stopAutoRun() {
+      // Clear the interval to stop auto-run
+      if (this.intervalId !== null) {
+        clearInterval(this.intervalId);
+      }
+    }
   },
+  beforeUnmount() {
+    // Clear the interval when the component is about to be unmounted to prevent memory leaks
+    this.stopAutoRun();
+  }
 };
 </script>
 <template>
@@ -121,6 +140,7 @@ export default {
   max-width: 80%;
   z-index: 1;
   color: white;
+  font-weight: 500;
 }
 
 .slider .list .item .content p:nth-child(1) {
@@ -178,6 +198,7 @@ export default {
   font-size: x-large;
   color: #eee;
   transition: 0.5s;
+  margin-left: 10px;
 }
 
 .arrows button:hover {
@@ -196,6 +217,7 @@ export default {
   padding: 0 50px;
   box-sizing: border-box;
   overflow: auto;
+  
 }
 
 .thumbnail::-webkit-scrollbar{
@@ -208,12 +230,19 @@ export default {
   filter: brightness(0.5);
   transition: 0.5s;
   flex-shrink: 0;
+  border-radius: 10px;
+
+}
+.thumbnail .item:hover{
+  border: white 5px solid;
+  border-radius: 10px;
 }
 .thumbnail .item img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  
 }
 
 .thumbnail .item.active{
@@ -222,6 +251,8 @@ export default {
 .thumbnail .item .content{
   position: absolute;
   inset: auto 10px 10px 10px;
+  color: white;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 678px){
@@ -230,6 +261,7 @@ export default {
     }
     .slider .list .item .content h2{
       font-size: 60px;
+      font-weight: 700;
     }
     .arrows{
       top: 10%;
